@@ -4,6 +4,7 @@ body {
 body h1,
 body p {
   margin-top: 0;
+  margin-bottom: 0;
 }
 body div {
   -webkit-box-sizing: border-box;
@@ -12,13 +13,39 @@ body div {
 body ul {
   font-size: 20px;
 }
+.button {
+  width: 95px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  background: #e7e5ff;
+  border: none;
+  color: navy;
+  border-radius: 3px;
+}
+.button:not(:last-child) {
+  margin-right: 5px;
+}
+.button:hover {
+  background: #f4f2ff;
+}
 .wrapper {
   position: relative;
   overflow: hidden;
   min-height: 100vh;
 }
 .header {
-  max-width: 100%;
+  width: 100%;
+}
+.button-group {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  margin-bottom: 10px;
 }
 img {
   max-width: 100%;
@@ -39,13 +66,13 @@ img {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 .layout-header {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 .layout-header .layout-item {
   display: -webkit-box;
@@ -91,9 +118,6 @@ img {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -webkit-box-align: left;
   -ms-flex-align: left;
   align-items: left;
@@ -102,8 +126,16 @@ img {
 .card-data-description {
   text-align: left;
 }
+.card-data-description {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.card-data-description .person-phone {
+  margin-bottom: 5px;
+}
 .accordeon-list {
   list-style-type: none;
+  margin-top: 0;
   padding-left: 0;
   padding-right: 0;
 }
@@ -146,6 +178,7 @@ img {
   }
   .person-name {
     font-size: 20px;
+    margin-bottom: 5px;
   }
   .layout-header {
     -webkit-box-orient: vertical;
@@ -210,6 +243,11 @@ img {
   .layout-header .card-data .card-data-title,
   .layout-header .card-data .card-data-description {
     text-align: center;
+  }
+  .button-group {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 

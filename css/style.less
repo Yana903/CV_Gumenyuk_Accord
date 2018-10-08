@@ -2,6 +2,7 @@ body {
   margin: 0;
   h1, p {
     margin-top: 0;
+    margin-bottom: 0;
   }
   div {
     box-sizing: border-box;
@@ -10,6 +11,29 @@ body {
     font-size: 20px;
   }
 }
+
+  .button {
+    width: 95px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    background: #e7e5ff;
+    border: none;
+    color: navy;
+    border-radius: 3px;
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+
+    &:hover {
+      background: #f4f2ff;
+    }
+
+    .hook-button()
+  }
+.hook-button() {};
+
 
 .wrapper {
   position: relative;
@@ -21,8 +45,16 @@ body {
 .hook-component() {
 
   .header {
-    max-width: 100%;
+    width: 100%;
   }
+
+  .button-group {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    margin-bottom: 10px;
+  }
+
   img {
     max-width: 100%;
   }
@@ -47,14 +79,14 @@ body {
 .layout {
   display: flex;
   width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
   .hook-layout()
 }
 
 .hook-layout() {
   &-header{
     justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 10px;
   }
 }
 
@@ -110,11 +142,19 @@ body {
   }
   &-data {
     flex-direction: column;
-    justify-content: center;
     align-items: left;
 
     &-title, &-description {
       text-align: left;
+    }
+
+    &-description {
+      margin-top: auto;
+      margin-bottom: auto;
+
+      .person-phone {
+        margin-bottom: 5px;
+      }
     }
   }
 }
@@ -122,6 +162,7 @@ body {
 .accordeon {
   &-list {
     list-style-type: none;
+    margin-top: 0;
     padding-left: 0;
     padding-right: 0;
   }
@@ -164,6 +205,7 @@ body {
 
     .person-name {
       font-size: 20px;
+      margin-bottom: 5px;
     }
 
     .layout-header {
@@ -215,6 +257,10 @@ body {
         }
       }
     }
+
+  .button-group {
+    justify-content: center;
+  }
 }
 
 
